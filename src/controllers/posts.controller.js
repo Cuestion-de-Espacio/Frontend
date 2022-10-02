@@ -9,9 +9,11 @@ export default async (idMounstro) => {
   .then((response) => response.json())
   .then((data) =>   
     postsElement.innerHTML += `
-    <h3>${data[idMounstro].nombre}</h3>
-    <h3>${data[idMounstro].beneficios}</h3>
-    <h3>${data[idMounstro].description}</h3>
+    <div class = 'box'>
+    <h1>${data[idMounstro].nombre}</h1>
+    <h5>${data[idMounstro].beneficios}</h5>
+    <p>${data[idMounstro].description}</p>
+    </div>
     `
   );
 ;
